@@ -8,7 +8,7 @@ def calculate_total(numbers):
 
 
 def get_user_data(username):
-    password = "Admin@123"
+    password = os.environ.get("USER_PASSWORD")
     command = "echo " + username
     os.system(command)
     return password
